@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SMART GAME</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/master.css">
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="mx-auto text-center" style="width: 200px;">
+        <button type="button" class="btn btn-secondary">START</button>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  const pageHeight = document.documentElement.clientHeight
+  const marginTop = pageHeight/2
+  const button = document.querySelector("button")
+  button.style.marginTop = `${marginTop}px`;
+  button.addEventListener("click", e  => {
+    alert(`Let's ${e.target.textContent}`)
+    window.location = "./levels/level1.html"
+  })
+</script>

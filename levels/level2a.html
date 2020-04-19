@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>LEVEL 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/master.css">
+  </head>
+  <body class="bg-dark">
+    <div class="container">
+      <div class="mx-auto text-center" style="width: 50%;">
+        <div id="text" class="text-white text-left">
+          Kamu memilih untuk berangkat. Namun ditengah wabah virus CORONA ini akankah kamu menggunakan
+          masker sebelum pergi keluar ?
+        </div>
+      </div>
+      <div id="footer" class="mx-auto fixed-bottom row text-center" style="height: 20vh;">
+        <div class="col-6">
+          <div id="button1" class="btn btn-primary pt-4" style="height: 15vh; width: 15vh;">
+            <div id="b1">
+              Gunakan masker
+            </div>
+          </div>
+        </div>
+        <div class="col-6">
+          <div id="button2" class="btn btn-primary pt-4" style="height: 15vh; width: 15vh;">
+            <div id="b2">
+              Langsung pergi
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script type="text/javascript">
+  const pageHeight = document.documentElement.clientHeight
+  const marginTop = pageHeight*10/100
+  const text = document.querySelector("#text")
+  const spin1 = document.querySelector("#b1")
+  const button1 = document.querySelector("#button1")
+  const spin2 = document.querySelector("#b2")
+  const button2 = document.querySelector("#button2")
+
+  text.style.marginTop = `${marginTop}px`
+
+  button1.addEventListener("click", e  => {
+    spin1.textContent = ""
+    spin1.className = "spinner-border"
+    setTimeout(() => {
+      window.location = "level3a.html"
+    }, 2000)
+  })
+
+  button2.addEventListener("click", e  => {
+    spin2.textContent = ""
+    spin2.className = "spinner-border"
+    setTimeout(() => {
+      window.location = "level3b.html"
+    }, 2000)
+  })
+</script>
